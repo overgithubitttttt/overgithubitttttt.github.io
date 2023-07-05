@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color:pink;
+      
+
+    }
+
+    .container {
+      max-width: 300px;
+      margin: 100px auto;
+      border: 1px solid pink;
+
+      padding: 20px;
+    }
+
+    label,
+    input {
+      display: block;
+      margin-bottom: 10px;
+      background-color : rgb(0, 234, 255);
+      border : 1px solid red;
+    }
+
+    button {
+      padding: 8px 16px;
+      background-color: beige;
+    }
+
+    #error-message {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+
+    <button onclick="checkLogin()">Login</button>
+
+    <p id="error-message">Incorrect username or password. Please try again.</p>
+  </div>
+
+  <script>
+    function checkLogin() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Replace these values with the correct username and password
+      const correctUsername = "mohitha";
+      const correctPassword = "mohitha";
+
+      if (username === correctUsername && password === correctPassword) {
+        // Redirect to the new webpage if login is successful
+        window.location.href = "http://127.0.0.1:5500/Web%20Development/project.html";
+      } else {
+        // Show error message if login is unsuccessful
+        document.getElementById("error-message").style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>
